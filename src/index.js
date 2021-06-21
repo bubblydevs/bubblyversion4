@@ -118,7 +118,7 @@ try {
     console.log(`❎ Express: ${err}`)
 }
 
-client.login('NzYzNDIwNDcyNjY2MzU3ODEx.X33cuA.v1NWB5IbQRepox4YyUsWMZzN_Zk')
+client.login('NzYzNDIwNDcyNjY2MzU3ODEx.X33cuA.bR5MBTA0IijVPwgs_KWIE9siq-c')
 
 //  music
 client.on("raw", (d) => client.manager.updateVoiceState(d))
