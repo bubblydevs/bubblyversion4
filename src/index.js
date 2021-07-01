@@ -100,7 +100,12 @@ try {
 
     router.post('/dblwebhook', webhook.listener(vote => {
         discordWebhook.send(`<@${vote.user}> **Has voted bubbly on top.gg**`)
-        client.users.cache.get(vote.user).send(
+        
+        const userLOL = client.users.cache.get(vote.user)
+
+        if (!userLOL) return 
+        
+        userLOL.send(
             new MessageEmbed()
             .setTitle('Bubbly Vote')
             .setDescription(`Thank you for voting for me on top.gg <@${vote.user}>! We will be giving out rewards in the next update.`)
