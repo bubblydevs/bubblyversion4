@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const { Client, Intents, Collection, MessageEmbed, WebhookClient } = require('discord.js')
 const { Manager } = require('erela.js')
 const Topgg = require('@top-gg/sdk')
