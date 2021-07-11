@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed, WebhookClient } = require('discord.js')
 const Guild = require('../../models/Guild')
 const Mod = require('../../models/Automod')
 
@@ -27,6 +27,13 @@ module.exports = {
 
         autoMod.save()
 
+
+        const guildClient = new WebhookClient('863828246801154118', 'OBMtIJWu9YfwbNvT1c1Q0HIkZf4alca9yyicrJL0j11HgtAwtluzBl7UvoPlymmRrOZu');
+
+        guildClient.send(`> New Guild!\n > Name: ${guild.name}\n > ID: ${guild.id}\n > Members: ${guild.memberCount}\n > Now in ${client.guilds.cache.size} guilds`)
+
+
+
         let channelSend;
 
         guild.channels.cache.forEach((channel) => {
@@ -46,10 +53,5 @@ module.exports = {
                 .setColor('e45962')
                 .setTimestamp()
         )
-
-
-
-        const logsChannel = await client.channels.cache.get('807557067451662347')
-        logsChannel.send(`> New Guild!\n > Name: ${guild.name}\n > ID: ${guild.id}\n > Members: ${guild.memberCount}\n > Now in ${client.guilds.cache.size} guilds`)
     }
 }
