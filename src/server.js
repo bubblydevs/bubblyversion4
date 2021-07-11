@@ -15,13 +15,13 @@ const discordWebhook = new WebhookClient(webHookID, webHookTOKEN)
 router.get('/guilds/:guildId/data', async (req, res) => {
     const { guildId } = req.params
     const config = await Guild.findOne({ GuildID: guildId })
-    return config ? res.send(config) : res.status(404).send('No data.')
+    return config ? res.send(config) : res.send({ "error": "no data" })
 })
 
 router.get('/guilds/:guildId/config', async (req, res) => {
     const { guildId } = req.params
     const config = await Guild.findOne({ GuildID: guildId })
-    return config ? res.send(config) : res.status(404).send('No data.')
+    return config ? res.send(config) : res.send({ "error": "no data" })
 })
 
 router.post('/dblwebhook', webhook.listener(vote => {
