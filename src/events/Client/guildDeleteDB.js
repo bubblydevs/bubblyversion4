@@ -5,6 +5,8 @@ const Mod = require("../../models/Automod");
 module.exports = {
   name: "guildDelete",
   run: async (client, guild) => {
+    if (guild.memberCount === undefined) return;
+
     Guild.findOneAndDelete(
       {
         GuildID: guild.id,
