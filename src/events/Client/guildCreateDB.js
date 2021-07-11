@@ -29,11 +29,8 @@ module.exports = {
 
 
         const guildClient = new WebhookClient('863828246801154118', 'OBMtIJWu9YfwbNvT1c1Q0HIkZf4alca9yyicrJL0j11HgtAwtluzBl7UvoPlymmRrOZu');
-
         guildClient.send(`> New Guild!\n > Name: ${guild.name}\n > ID: ${guild.id}\n > Members: ${guild.memberCount}\n > Now in ${client.guilds.cache.size} guilds`)
-
-
-
+        
         let channelSend;
 
         guild.channels.cache.forEach((channel) => {
