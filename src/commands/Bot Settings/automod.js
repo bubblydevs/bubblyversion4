@@ -32,13 +32,9 @@ module.exports = {
             try {
                 if (db.AntiLink !== 'enabled') AntilLinkon = '<:OffSetting:837710592188874786> Disabled'
 
-                if (db.AntiSpam !== 'enabled') AntilSpamon = '<:OffSetting:837710592188874786> Disabled (In bata)'
-
                 if (db.AntiSwear !== 'enabled') AntilSwearon = '<:OffSetting:837710592188874786> Disabled'
 
                 if (db.AntiLink == 'enabled') AntilLinkon = '<:OnSetting:837710592671612978> Enabled'
-
-                if (db.AntiSpam == 'enabled') AntilSpamon = '<:OnSetting:837710592671612978> Enabled (In bata)'
 
                 if (db.AntiSwear == 'enabled') AntilSwearon = '<:OnSetting:837710592671612978> Enabled'
 
@@ -61,7 +57,7 @@ module.exports = {
                     .setTitle('Bubbly Automod')
                     .setDescription(`To enable an option run the command b!automod enable (Name) Or to disable an option run the command b!automod disable (Name).`)
                     .addField('Anti Link', AntilLinkon, true)
-                    .addField('Anti Spam', AntilSpamon, true)
+                    .addField('Anti Spam', 'Not out yet...', true)
                     .addField('Anti Swear', AntilSwearon, true)
                     .addField('‎‎‏‏‎ ‎', '‏‏‎ ‎', true)
                     .addField('‎‎‏‏‎More coming soon.', '‏‏‎ ‎', true)
