@@ -17,7 +17,7 @@ module.exports = {
         })
 
         function pickStatus() {
-            let status = [`${client.guilds.cache.size} Servers 🎉`, `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Members 😲`, `bubblybot.xyz || New ui update.`, `b! | b!help | b!info 👁`, `Thank you so much for ${client.guilds.cache.size} servers. 😃`, `hey bubbly... soon... real life...`, `hey bubbly... soon... real life...`]
+            let status = [`${client.guilds.cache.size} Servers 🎉`, `${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocaleString()} Members 😲`, `bubblybot.xyz || New ui update.`, `b! | b!help | b!info 👁`, `Thank you so much for ${client.guilds.cache.size} servers. 😃`, 'hey bubbly... soon... real life...', 'hey bubbly... soon... real life...']
             let Status = Math.floor(Math.random() * status.length);
 
             client.user.setActivity(status[Status], {
