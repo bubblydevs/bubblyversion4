@@ -82,7 +82,7 @@ try {
     const router = express()
 
     const webhook = new Topgg.Webhook(token)
-    const discordWebhook = new WebhookClient(webHookID, webHookTOKEN)
+    // const discordWebhook = new WebhookClient(webHookID, webHookTOKEN)
 
     router.get('/guilds/:guildId/data', async (req, res) => {
         const { guildId } = req.params
@@ -97,7 +97,7 @@ try {
     })
 
     router.post('/dblwebhook', webhook.listener(vote => {
-        discordWebhook.send(`<@${vote.user}> **Has voted bubbly on top.gg**`)
+        // discordWebhook.send(`<@${vote.user}> **Has voted bubbly on top.gg**`)
         
         const userLOL = client.users.cache.get(vote.user)
 
