@@ -22,8 +22,8 @@ module.exports = {
     );
 
     const guildClient = new WebhookClient(
-      "863828246801154118",
-      "OBMtIJWu9YfwbNvT1c1Q0HIkZf4alca9yyicrJL0j11HgtAwtluzBl7UvoPlymmRrOZu"
+      "865304613040816168",
+      "18kRo62vbxekYfh6_JkKmLJN2dKv4Jc6qWQsBsO1_hND40zbv00yzZ04SYzLF-jKQnsW"
     );
 
     guildClient.send(

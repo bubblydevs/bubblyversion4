@@ -22,8 +22,8 @@ mongoose.connect('mongodb+srv://Bubbly:rmB6zkjCp3qyHfw6@bubbly.ioanw.mongodb.net
 const clientID = "efca6521b9374ea48c807c4b203531ac"
 const clientSecret = "54262698df7a4903a557d92ce46d65d8"
 const token = "ikjiajfijapofjkapojkfopakfpoakfokamf?"
-const webHookID = "836266986437869578"
-const webHookTOKEN = "7dRaN6Y2sVCZ9uBmMQNcxAha1W4jqYX5S2PTo7wiPNyPcAyZPdjQqOr3zPY52vn_0WWX"
+const webHookID = "865303667204292649"
+const webHookTOKEN = "_Mk8eDNYIzTU45pVbDw0KPykfaZG5gSO8y7ObBA2T1G7cYyjGqtpN_aiB7WBLZFmEr6u"
 
 const { promisify } = require('util')
 const glob = require('glob')
@@ -82,7 +82,7 @@ try {
     const router = express()
 
     const webhook = new Topgg.Webhook(token)
-    // const discordWebhook = new WebhookClient(webHookID, webHookTOKEN)
+    const discordWebhook = new WebhookClient(webHookID, webHookTOKEN)
 
     router.get('/guilds/:guildId/data', async (req, res) => {
         const { guildId } = req.params
@@ -97,7 +97,7 @@ try {
     })
 
     router.post('/dblwebhook', webhook.listener(vote => {
-        // discordWebhook.send(`<@${vote.user}> **Has voted bubbly on top.gg**`)
+        discordWebhook.send(`<@${vote.user}> **Has voted bubbly on top.gg**`)
         
         const userLOL = client.users.cache.get(vote.user)
 
