@@ -3,9 +3,10 @@ const dbots = require('dbots')
 
 module.exports = {
     name: 'ready',
-    run: async (client) => {
+    run: async (client, statcordClient) => {
         client.manager.init(client.user.id);
-
+        statcordClient.autopost()
+        
         const poster = new dbots.Poster({
             client,
             apiKeys: {
