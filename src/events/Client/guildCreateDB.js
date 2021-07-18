@@ -4,7 +4,7 @@ const Mod = require("../../models/Automod");
 
 module.exports = {
   name: "guildCreate",
-  run: async (client, guild) => {
+  run: async (client, statcordClient, guild) => {
     duild = new Guild({
       GuildName: guild.name,
       GuildID: guild.id,

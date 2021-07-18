@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 
 module.exports = {
     name: 'ready',
-    run: async (client) => {
+    run: async (client, statcordClient) => {
         console.log('✅ Slash commands')
         
         client.api.applications(client.user.id).commands.post({

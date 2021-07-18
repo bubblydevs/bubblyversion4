@@ -3,7 +3,7 @@ const fetch = require('node-fetch')
 
 module.exports = {
     name: 'message',
-    run: async (client, message) => {
+    run: async (client, statcordClient, message) => {
         if (message.author.bot) return;
 
         fetch(`http://localhost:4002/guilds/${message.guild.id}/data`)

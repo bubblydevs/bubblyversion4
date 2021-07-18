@@ -1,6 +1,6 @@
 module.exports = {
     name: 'error',
-    run: async (client) => {
+    run: async (client, statcordClient,) => {
         return;
     }
 }

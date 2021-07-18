@@ -5,6 +5,8 @@ const ms = require("ms");
 module.exports = {
   name: "message",
   run: async (client, statcordClient, message) => {
+
+    console.log(client)
     if (!message.guild || message.author.bot) return;
 
     fetch(`http://localhost:4002/guilds/${message.guild.id}/data`)
