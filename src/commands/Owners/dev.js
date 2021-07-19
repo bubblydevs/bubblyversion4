@@ -110,7 +110,7 @@ module.exports = {
         }
 
         if (args[0] === 'guilds') {
-            const messageSend = args.slice(1).join(' ');
+            const messageSend = args.slice(2).join(' ');
 
             if (!messageSend) return message.channel.send(`You can't send nothing to all of the guild's mate!.`)
 
