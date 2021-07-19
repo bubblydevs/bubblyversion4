@@ -5,7 +5,7 @@ const path = require('path')
 
 module.exports = {
     name: 'guildMemberAdd',
-    run: async (client, member) => {
+    run: async (client, statcordClient, member) => {
         // databse / funcions
         let welcomeCustom = []
         let welcomeChannel = []

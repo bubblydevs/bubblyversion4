@@ -3,7 +3,7 @@ const Guild = require('../../models/Guild')
 
 module.exports = {
     name: 'guildMemberAdd',
-    run: async (client, member) => {
+    run: async (client, statcordClient, member) => {
         const db = await Guild.findOne({
             GuildID: member.guild.id
         }, async (err, guild) => {

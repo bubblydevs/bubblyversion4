@@ -22,7 +22,8 @@
     "glob": "^7.1.6",
     "moment": "^2.29.1",
     "mongoose": "^5.12.0",
-    "reconlx": "^1.2.41"
+    "reconlx": "^1.2.41",
+    "statcord.js": "^3.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

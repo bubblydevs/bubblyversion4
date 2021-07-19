@@ -1,14 +1,26 @@
 const { Client, Intents, Collection, MessageEmbed, WebhookClient } = require('discord.js')
+const statcord = require('statcord.js')
 const { Manager } = require('erela.js')
 const Topgg = require('@top-gg/sdk')
 const Guild = require('./models/Guild')
 const Spotify = require("erela.js-spotify");
 const mongoose = require('mongoose')
+
+
+// clients
 const client = new Client({
     repliedUser: false,
     ws: {
         intents: Intents.ALL
     },
+})
+
+const statcordClient = new statcord.Client({
+    client,
+    key: 'statcord.com-ReOYl2VKCu6z7he3A1Kz',
+    postCpuStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+    postMemStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+    postNetworkStatistics: false, /* Whether to post memory statistics or not, defaults to true */
 })
 
 const dbOptions = {
@@ -64,7 +76,7 @@ client.manager = new Manager({
         eventFiles.map((value) => {
             const file = require(value)
             client.events.set(file.name, file)
-            client.on(file.name, file.run.bind(null, client))
+            client.on(file.name, file.run.bind(null, client, statcordClient))
         })
 
         commandFiles.map((value) => {
