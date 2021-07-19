@@ -110,8 +110,8 @@ module.exports = {
         }
 
         if (args[0] === 'guilds') {
-            const messageSend = args.slice(2).join(' ');
-            
+            const messageSend = args.slice(1).join(' ');
+
 
             if (!messageSend) return message.channel.send(`You can't send nothing to all of the guild's mate!.`)
 
@@ -126,7 +126,7 @@ module.exports = {
                     channels[0].send(
                         new MessageEmbed()
                         .setTitle('Announcement')
-                        .setDescription(`${args[0]}`)
+                        .setDescription(`${messageSend}`)
                         .setColor('e35962')
                         .setTimestamp()
                         .setFooter(`Announcement by ${message.author.tag} (Bot Owner)`, message.author.displayAvatarURL({
