@@ -18,6 +18,6 @@ module.exports = {
             msg.edit('We did not find this server in the database we have added this server in the database...')
         }
 
-        msg.edit('We checked some stuff and every is fine...')
+        msg.edit('We checked some stuff and every is fine....')
     }
 }
