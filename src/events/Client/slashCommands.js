@@ -6,55 +6,7 @@ module.exports = {
     run: async (client, statcordClient) => {
         console.log('✅ Slash commands')
         
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "meme",
-                description: "Sends a meme"
-            }
-        }) 
-        
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "cat",
-                description: "Sends a cat"
-            },
-        })
-
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "dog",
-                description: "Sends a dog"
-            }
-        })
-
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "impostor",
-                description: "Are you the impostor?",
-                options: [
-                    {
-                        name: 'content',
-                        description: "Content for the image.",
-                        type: 3,
-                        required: true
-                    }
-                ]
-            }
-        })
-
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "stonks",
-                description: "A image of the mention user",
-            },
-        })
-
-        client.api.applications(client.user.id).commands.post({
-            data: {
-                name: "drip",
-                description: "Show your drip.",
-            }
-        })
+        client.api.applications(client.user.id).commands.post({}) 
         
         client.ws.on("INTERACTION_CREATE", async interaction => {
             const command = interaction.data.name.toLowerCase()
