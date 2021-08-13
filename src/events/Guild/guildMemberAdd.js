@@ -67,9 +67,7 @@ module.exports = {
         ctx.drawImage(background, x, y)
 
         const pfp = await Canvas.loadImage(
-            member.user.displayAvatarURL({
-                format: 'png'
-            })
+            member.user.displayAvatarURL()
         )
         x = 360
         y = 25
@@ -81,12 +79,12 @@ module.exports = {
         x = 319
         ctx.fillText(text, x, 60 + pfp.height)
 
-        const attachment = new MessageAttachment(canvas.toBuffer(), 'bubbly-welcome.png')
+        const attachment = new MessageAttachment(canvas.toBuffer(), 'bubbly-welcome.gif')
 
         const embed = new MessageEmbed()
          .setAuthor(member.user.tag, member.user.displayAvatarURL())
          .setDescription(welcomeCustom)
-         .setImage('attachment://bubbly-welcome.png')
+         .setImage('attachment://bubbly-welcome.gif')
          .setColor('RANDOM')
 
         welcomeChannel.send({embed, files: [attachment]})
