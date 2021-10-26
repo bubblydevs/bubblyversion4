@@ -10,8 +10,7 @@ module.exports = {
         const poster = new dbots.Poster({
             client,
             apiKeys: {
-                topgg: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc2MzQyMDQ3MjY2NjM1NzgxMSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjE1NjE5NTcyfQ.Hb1KVDh6XcE4qFDdvynpwgjOinSz1AbzwPFFIfQ47ao',
-                DiscordBotList: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoxLCJpZCI6Ijc2MzQyMDQ3MjY2NjM1NzgxMSIsImlhdCI6MTYxNTYyMDE4M30.dwlRzYreKwdFbxN-rDabSpFISFXjoOXZ6nyP_FWI9LY'
+        
             },
             clientLibrary: 'discord.js',
             serverCount: async () => client.guilds.cache.size.toLocaleString(),
