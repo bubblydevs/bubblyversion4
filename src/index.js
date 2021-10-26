@@ -172,6 +172,7 @@ const convertToUnresolved = Spotify.convertToUnresolved;
 
 Spotify.convertToUnresolved = (track) => {
     const unresolved = convertToUnresolved(track);
+    
     unresolved.uri = track.external_urls.spotify;
     return unresolved;
 }
