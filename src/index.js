@@ -17,7 +17,7 @@ const client = new Client({
 
 const statcordClient = new statcord.Client({
     client,
-    key: 'statcord.com-ReOYl2VKCu6z7he3A1Kz',
+    key: '',
     postCpuStatistics: true, /* Whether to post memory statistics or not, defaults to true */
     postMemStatistics: true, /* Whether to post memory statistics or not, defaults to true */
     postNetworkStatistics: true, /* Whether to post memory statistics or not, defaults to true */
@@ -29,13 +29,13 @@ const dbOptions = {
     useFindAndModify: true,
 }
 
-mongoose.connect('mongodb+srv://Bubbly:rmB6zkjCp3qyHfw6@bubbly.ioanw.mongodb.net/Bubbly?retryWrites=true&w=majority', dbOptions).then(console.log('✅ Database connected'))
+mongoose.connect('', dbOptions).then(console.log('✅ Database connected'))
 
-const clientID = "efca6521b9374ea48c807c4b203531ac"
-const clientSecret = "54262698df7a4903a557d92ce46d65d8"
-const token = "ikjiajfijapofjkapojkfopakfpoakfokamf?"
-const webHookID = "865303667204292649"
-const webHookTOKEN = "_Mk8eDNYIzTU45pVbDw0KPykfaZG5gSO8y7ObBA2T1G7cYyjGqtpN_aiB7WBLZFmEr6u"
+const clientID = ""
+const clientSecret = "
+const token = ""
+const webHookID = ""
+const webHookTOKEN = ""
 
 const { promisify } = require('util')
 const glob = require('glob')
@@ -52,7 +52,7 @@ client.manager = new Manager({
         {
             host: "localhost",
             port: 3010,
-            password: "Bubblymusic"
+            password: ""
         },
     ],
     plugins: [
@@ -133,7 +133,7 @@ try {
     console.log(`❎ Express: ${err}`)
 }
 
-client.login('NzYzNDIwNDcyNjY2MzU3ODEx.X33cuA.Pg6tC-7tJ0oawmfc_shVwPQzXDU')
+client.login('')
 
 //  music
 client.on("raw", (d) => client.manager.updateVoiceState(d))
